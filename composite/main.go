@@ -13,7 +13,7 @@ func main() {
 	folder1 := folder{"Folder 1", []composite{file1}}
 	folder2 := folder{"Folder 2", []composite{file2, file3}}
 	folder3 := folder{"Folder 3", []composite{file4, file5, file6}}
-  folder4 := folder{"Folder 4", []composite{folder1, folder2, file7}}
+	folder4 := folder{"Folder 4", []composite{folder1, folder2, file7}}
 	root := folder{"Root", []composite{folder3, folder4}}
 	root.search("Cow")
 	root.search("Dog")

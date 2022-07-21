@@ -6,9 +6,10 @@ import (
 )
 
 type file struct {
-	name string
+	name    string
 	content string
 }
+
 func (c file) getName() string {
 	return c.name
 }
