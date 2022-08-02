@@ -17,11 +17,11 @@ func(concrete *folder) clone() printablePrototype {
 }
 func(concrete *folder) print(indentation int) string {
 	var result string
-	prefix := strings.Repeat(" ", indentation)
+	prefix := strings.Repeat(" ", indentation * 4)
 	result += prefix + concrete.name + "\n" 
 	for _, proto := range concrete.children {
 		result += prefix
-		result += proto.print(indentation + indentation)
+		result += proto.print(indentation + 1)
 	}
 	return result
 }
