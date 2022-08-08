@@ -1,6 +1,6 @@
 package main
 
-type blueDress struct {}
+type blueDress struct{}
 
 func newBlueDress() *blueDress {
 	return &blueDress{}

@@ -1,17 +1,17 @@
 package main
 
 type player struct {
-	dress dress
+	dress      dress
 	playerType string
-	lat int
-	long int
+	lat        int
+	long       int
 }
 
 func newPlayer(playerType, dressType string) *player {
 	dress, _ := dressFactoryInstance.getDressByType(dressType)
 	return &player{
 		playerType: playerType,
-		dress: dress,
+		dress:      dress,
 	}
 }
 

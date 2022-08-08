@@ -1,13 +1,13 @@
 package main
 
 type game struct {
-	redTeam []*player
+	redTeam  []*player
 	blueTeam []*player
 }
 
 func newGame() *game {
 	return &game{
-		redTeam: make([]*player, 1),
+		redTeam:  make([]*player, 1),
 		blueTeam: make([]*player, 1),
 	}
 }

@@ -10,7 +10,6 @@ func main() {
 	game.addRedPlayer("Offense")
 	game.addRedPlayer("Offense")
 
-
 	game.addBluePlayer("Defense")
 	game.addBluePlayer("Defense")
 	game.addBluePlayer("Defense")

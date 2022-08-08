@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 const (
-	RedDressType = "RedDress"
+	RedDressType  = "RedDress"
 	BlueDressType = "BlueDress"
 )
 
@@ -18,8 +18,8 @@ type dressFactory struct {
 func (d *dressFactory) getDressByType(dressType string) (dress, error) {
 	t, exists := d.dressMap[dressType]
 	if exists {
-		return t, nil 
-	} 
+		return t, nil
+	}
 	if dressType == RedDressType {
 		d.dressMap[dressType] = newRedDress()
 		return d.dressMap[dressType], nil
