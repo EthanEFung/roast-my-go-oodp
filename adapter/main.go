@@ -2,11 +2,11 @@ package main
 
 func main() {
 	app := &app{}
-	app.setJSONConfig([]byte("json"))
+	app.exportJSON([]byte("json"))
 
-	service := &yamlService{}
+	yamlService := &yamlService{}
 	
-	a := &adapter{service, "yaml"}
+	a := &adapter{service: yamlService}
 	a.convert()
-	a.setJSONConfig([]byte{})
+	a.exportJSON([]byte{})
 }
