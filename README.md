@@ -17,3 +17,6 @@ Here's just a few ideas of how to contribute.
 1. Tell me why an example misrepresents the object oriented pattern.
 2. Tell me why a pattern over complicates something trivial in Go.
 3. Call out the ambiguity of an example, and offer suggestions of how to improve the example.
+
+# Roast of the Week
+[Adapter Pattern](/adapter/)
