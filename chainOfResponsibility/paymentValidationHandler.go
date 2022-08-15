@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/*
+4 paymentValidationHandler is a concrete handler of the chain of responsibility pattern
+*/
 type paymentValidationHandler struct {
 	next handler
 }

@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/*
+  shippingHandler is a concrete handler of the chain of responsibility pattern
+*/
 type shippingHandler struct {
 	next handler
 }

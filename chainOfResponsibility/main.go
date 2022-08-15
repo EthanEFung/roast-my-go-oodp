@@ -3,6 +3,11 @@ package main
 import "fmt"
 
 func main() {
+	basket := []item{
+		{"HealthAde Kombucha - Tropical Punch", 6, 4.99},
+		{"Red Bull - Original", 6, 2.25},
+	}
+
 	card := payment{
 		cardHolder:   "John Doe",
 		cardNumber:   "5200 0000 0000 0000",
@@ -19,11 +24,6 @@ func main() {
 		network:      "Master Card",
 	}
 
-	basket := []item{
-		{"HealthAde Kombucha - Tropical Punch", 6, 4.99},
-		{"Red Bull - Original", 6, 2.25},
-	}
-
 	goodOrder := &order{
 		address: "1000 Vin Scully Ave, Los Angeles, CA 90012",
 		payment: card,
@@ -36,9 +36,14 @@ func main() {
 		basket:  basket,
 	}
 
-	/** CoC **/
+  /*
+    in the chain of responsibility pattern we have handlers that are linked together in a list
+  */
 	transactor := &transactionHandler{}
 
+  /*
+    each handler generally will have a method that sets the next handler
+  */
 	shippingCostAdder := &shippingHandler{}
 	shippingCostAdder.setNext(transactor)
 
