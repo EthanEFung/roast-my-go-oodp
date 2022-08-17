@@ -6,9 +6,10 @@ package main
 type offCommand struct {
 	device device
 }
-func(command *offCommand) name() string {
+
+func (command *offCommand) name() string {
 	return "offCommand"
 }
-func(command *offCommand) execute() {
+func (command *offCommand) execute() {
 	command.device.off()
 }

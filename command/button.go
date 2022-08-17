@@ -8,7 +8,8 @@ import "fmt"
 type button struct {
 	command command
 }
-func(sender *button) click() {
+
+func (sender *button) click() {
 	fmt.Println(sender.command.name(), "button click")
 	sender.command.execute()
 }
