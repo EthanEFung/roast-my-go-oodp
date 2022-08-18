@@ -5,6 +5,9 @@ import (
 	"strings"
 )
 
+/*
+	file is a concrete composite
+*/
 type file struct {
 	name    string
 	content string
