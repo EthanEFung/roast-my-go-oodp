@@ -2,11 +2,14 @@ package main
 
 import "time"
 
+/*
+	submitter is an interface with a submit method
+*/
 type submitter interface {
-	submit(values formValues) error 
+	submit(values formValues) error
 }
 
-type submitterInstance struct {}
+type submitterInstance struct{}
 
 func newSubmitter() submitter {
 	return submitterInstance{}

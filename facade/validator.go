@@ -5,11 +5,14 @@ import (
 	"net/mail"
 )
 
+/*
+	validator is an interface with a validate method
+*/
 type validator interface {
-	validate(values formValues) error 
+	validate(values formValues) error
 }
 
-type validatorInstance struct {}
+type validatorInstance struct{}
 
 func newValidator() validator {
 	return validatorInstance{}
