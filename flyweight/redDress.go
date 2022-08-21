@@ -1,5 +1,8 @@
 package main
 
+/*
+	redDress is a concrete flyweight that is consumed by the `player` struct
+*/
 type redDress struct {
 }
 

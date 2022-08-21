@@ -11,10 +11,18 @@ var dressFactoryInstance = &dressFactory{
 	dressMap: make(map[string]dress),
 }
 
+/*
+	dressFactory is an object that stores references to the different
+	`dress` objects that our game supports.
+*/
 type dressFactory struct {
 	dressMap map[string]dress
 }
 
+/*
+	getDressByType will return a dress if not previously instantiated, but
+	supported by our application.
+*/
 func (d *dressFactory) getDressByType(dressType string) (dress, error) {
 	t, exists := d.dressMap[dressType]
 	if exists {

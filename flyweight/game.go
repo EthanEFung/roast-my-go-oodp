@@ -1,5 +1,8 @@
 package main
 
+/*
+	game is the main program this application runs
+*/
 type game struct {
 	redTeam  []*player
 	blueTeam []*player
