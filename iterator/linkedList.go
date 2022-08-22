@@ -1,8 +1,10 @@
 package main
 
-/* implements the collection interface */
+/*
+	linkedList is a collection of listNodes and means of traversal via `createIterator`
+*/
 type linkedList struct {
-	head    *listNode
+	head *listNode
 	tail *listNode
 }
 

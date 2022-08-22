@@ -1,8 +1,10 @@
 package main
 
-/* implements the iterator interface */
+/*
+	linkedListIterator implements the iterator interface
+*/
 type linkedListIterator struct {
-	current *listNode
+	current *listNode // stores state of the linked list
 }
 
 func (i *linkedListIterator) next() int {
