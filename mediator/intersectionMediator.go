@@ -1,5 +1,8 @@
 package main
 
+/*
+	intersectionMediator is the mediator of this example
+*/
 type intersectionMediator struct {
 	lightQueue []*trafficLight
 }
@@ -19,16 +22,16 @@ func (m *intersectionMediator) service() {
 }
 
 /*
-	requestCrossing is an example of a message passed to the mediator
-	which will be passed to the traffic light
+	requestCrossing is an example of a message passed to the mediator which will be
+	passed to the traffic light
 */
 func (m *intersectionMediator) requestCrossing(light *trafficLight) {
 	light.requestCrossing()
 }
 
 /*
-	append is not apart of the pattern, just utility function
-	that makes it easier to create the lightQueue
+	append is not apart of the pattern, just utility function that makes it easier to
+	create the lightQueue
 */
 func (m *intersectionMediator) append(light *trafficLight) {
 	m.lightQueue = append(m.lightQueue, light)

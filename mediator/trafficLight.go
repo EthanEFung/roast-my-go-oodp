@@ -5,6 +5,10 @@ import (
 	"time"
 )
 
+/*
+	trafficLight is another struct that holds reference to the mediator object, and
+	passes messages relevant to the entire application through the mediator
+*/
 type trafficLight struct {
 	id         string
 	enableWalk bool
@@ -35,6 +39,7 @@ func (c *trafficLight) call() {
 	c.enableWalk = false
 	fmt.Printf("LIGHT %v --> Red\n", c.id)
 }
+
 func (c *trafficLight) requestCrossing() {
 	/*
 		here, we see that the traffic light has
