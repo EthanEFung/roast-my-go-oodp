@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 /*
-  An originator is a struct that has an internal state
-  and can produce snapshots of that internal state called "Mementos"
+  An originator is a struct that has an internal state and can produce snapshots of
+  that internal state called "Mementos"
 */
 type originator struct {
   state string
@@ -23,9 +23,9 @@ func(o *originator) getState() string {
 }
 
 /*
-  A memento is a snapshot object that represents a snapshot of
-  the originators state. Note, that the memento has no "setter"
-  since the state should only be set when the memento is initialized.
+  A memento is an object that represents a snapshot of the originators state. Note,
+  that the memento has no "setter" since the state should only be set when the memento
+  is initialized.
 */
 type memento struct {
   state string
@@ -35,8 +35,8 @@ func (m *memento) getState() string {
 }
 
 /*
-  A caretaker stores a stack of mementos and has means of adding to the
-  stack as well as accessing all the menentos that were added previously.
+  A caretaker stores a stack of mementos and has means of adding and accessing all
+  the menentos.
 */
 type caretaker struct {
   mementos []*memento
