@@ -2,11 +2,15 @@ package main
 
 import "strings"
 
+/*
+	folder is a concrete printablePrototype
+*/
 type folder struct {
-	name string
+	name     string
 	children []printablePrototype
 }
-func(concrete *folder) clone() printablePrototype {
+
+func (concrete *folder) clone() printablePrototype {
 	clone := &folder{
 		name: concrete.name + "_clone",
 	}
@@ -15,10 +19,10 @@ func(concrete *folder) clone() printablePrototype {
 	}
 	return clone
 }
-func(concrete *folder) print(indentation int) string {
+func (concrete *folder) print(indentation int) string {
 	var result string
-	prefix := strings.Repeat(" ", indentation * 4)
-	result += prefix + concrete.name + "\n" 
+	prefix := strings.Repeat(" ", indentation*4)
+	result += prefix + concrete.name + "\n"
 	for _, proto := range concrete.children {
 		result += prefix
 		result += proto.print(indentation + 1)
