@@ -1,12 +1,18 @@
 package main
 
 import (
+	"fmt"
 	"io"
 	"net/http"
 	"os"
 	"time"
 )
 
+/*
+	cachedTodayController adheres to the http.Handler interface. It is responsible for calling
+	the third party service for json data, and storing the response as a json file if the
+	todayController has no file to serve or if the request is the first request of the day.
+*/
 type cachedTodayController struct {
 	todayController todayController
 }
@@ -27,10 +33,12 @@ func (s cachedTodayController) ServeHTTP(w http.ResponseWriter, r *http.Request)
 		w.WriteHeader(500)
 		return
 	}
+	fmt.Println("serving todays resource")
 	s.todayController.ServeHTTP(w, r)
 }
 
 func fetchJSON() error {
+	fmt.Println("fetching todays resource")
 	res, err := http.Get("https://data.nba.net/data/10s/prod/v1/today.json")
 	if err != nil {
 		return err
