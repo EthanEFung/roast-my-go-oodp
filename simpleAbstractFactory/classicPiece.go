@@ -1,5 +1,9 @@
 package main
 
+/*
+	classicPiece is a concrete pieceInterface and the product produced from the
+	classicFactory methods
+*/
 type classicPiece struct {
 	piece
 }

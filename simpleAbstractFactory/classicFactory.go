@@ -1,5 +1,8 @@
 package main
 
+/*
+	classicFactory is the concrete abstract factory of abstractChessFactory
+*/
 type classicFactory struct{}
 
 func (af classicFactory) makePawn() pieceInterface {

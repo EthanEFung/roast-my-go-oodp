@@ -15,9 +15,18 @@ func info(p pieceInterface) {
 }
 
 func main() {
+	/*
+		imagine we have a catalog of different chess piece styles for our application, and
+		would like to make sure that these collections remain in tact (no mixing).
+	*/
 	classic := &classicFactory{}
 	modern := &modernFactory{}
 
+	/*
+		by creating differnt factories that abide by the same interface, we can produce
+		the same products without risk of the products falling outside of the family
+		of objects.
+	*/
 	classicPawn := classic.makePawn()
 	classicQueen := classic.makeQueen()
 
