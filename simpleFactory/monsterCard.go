@@ -1,6 +1,6 @@
 package main
 
-/* implements the card product interface */
+/* monsterCard implements the card product interface */
 type monsterCard struct {
 	name string
 }

@@ -1,7 +1,9 @@
 package main
 
+/*
+	energyCard implements the `card` interface
+*/
 type energyCard struct {
-	// implements the card interface
 	name string
 }
 func (c energyCard) Name() string {
