@@ -11,6 +11,10 @@ type single struct {}
 
 var instance *single
 
+/*
+  getInstance is a function that returns the singleton and creates an instance of the
+  singleton if and only the instance has not been created.
+*/
 func getInstance() *single {
   if instance == nil {
     lock.Lock()
@@ -35,6 +39,7 @@ func getInstance() *single {
 
 func main() {
   for i := 0; i < 30; i++ {
+    // notice here in our example that we spin up seperate go routines of getInstance
     go getInstance()
   }
   fmt.Scanln()
