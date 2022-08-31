@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/*
+	stateMoving is a concrete `state`
+*/
 type stateMoving struct {
 	tram *tram
 }
@@ -21,4 +24,4 @@ func (state stateMoving) openDoors() {
 }
 func (state stateMoving) requestStop() {
 	fmt.Println("requesting stop")
-} 
+}

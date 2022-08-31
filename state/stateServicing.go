@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/*
+	stateServicing is a concrete `state`
+*/
 type stateServicing struct {
 	tram *tram
 }
@@ -20,4 +23,4 @@ func (state stateServicing) openDoors() {
 }
 func (state stateServicing) requestStop() {
 	fmt.Println("tram cannot receive request while servicing")
-} 
+}

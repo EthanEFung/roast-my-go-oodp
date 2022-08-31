@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/*
+	stateStopped is a concrete `state`
+*/
 type stateStopped struct {
 	tram *tram
 }
@@ -21,4 +24,4 @@ func (state stateStopped) openDoors() {
 }
 func (state stateStopped) requestStop() {
 	fmt.Println("tram cannot receive requests to stop while stopped")
-} 
+}

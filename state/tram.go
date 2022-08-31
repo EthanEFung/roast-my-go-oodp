@@ -4,9 +4,9 @@ package main
 	tram is the context in this pattern which stores a reference to a current state
 */
 type tram struct {
-	state state
-	moving *stateMoving
-	stopped *stateStopped
+	state     state // here we see that we store reference to a `state`
+	moving    *stateMoving
+	stopped   *stateStopped
 	servicing *stateServicing
 }
 
@@ -19,9 +19,17 @@ func newTram() *tram {
 	return result
 }
 
+/*
+	setState is what is used for transitions from one state to the next
+*/
 func (context *tram) setState(state state) {
 	context.state = state
 }
+
+/*
+	here can see that all of the functionality that is being used is a function of the
+	trams `state`
+*/
 
 func (context *tram) move() {
 	context.state.move()
@@ -37,4 +45,4 @@ func (context *tram) openDoors() {
 }
 func (context *tram) requestStop() {
 	context.state.requestStop()
-} 
+}
