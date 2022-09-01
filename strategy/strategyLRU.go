@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+/*
+	strategyLRU is a concrete cache strategy
+*/
 type strategyLRU struct {
 }
 

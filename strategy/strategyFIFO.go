@@ -4,6 +4,9 @@ import (
 	"fmt"
 )
 
+/*
+	strategyFIFO is a concrete cache strategy
+*/
 type strategyFIFO struct {
 }
 
