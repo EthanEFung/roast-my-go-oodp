@@ -9,10 +9,19 @@ type operations interface {
 	sendNotification(string) error
 }
 
+/*
+	otp is short for "one time password", and is used as the basis of our algorithm
+	objects.
+*/
 type otp struct {
 	operations operations
 }
 
+/*
+	here we find the primary algorithm outlining all the operations in algorithms process.
+	Notice, the usage of `otp.operations` which is a reference to an interface. otp abides by
+	the operations interface, and provides base methods that can be used.
+*/
 func (o *otp) createAndSendPassword(pwLength int) error {
 	otp := o.operations.getRandomPassword(pwLength)
 	o.operations.savePassword(otp)
