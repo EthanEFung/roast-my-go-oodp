@@ -2,9 +2,13 @@ package main
 
 import "fmt"
 
+/*
+	charmander implements the pokemon interface
+*/
 type charmander struct {
 	stats
 }
+
 func (element *charmander) getType() string {
 	return "fire"
 }

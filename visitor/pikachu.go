@@ -2,7 +2,9 @@ package main
 
 import "fmt"
 
-
+/*
+	pikachu implements the pokemon interface
+*/
 type pikachu struct {
 	stats
 }
@@ -20,4 +22,3 @@ func (element *pikachu) printStats() {
 func (element *pikachu) accept(v visitor) {
 	v.visitPikachu(element)
 }
-

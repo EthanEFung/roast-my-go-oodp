@@ -5,8 +5,8 @@ package main
 	to each pokemon element
 */
 type stats struct {
-	attack int
+	attack  int
 	defense int
-	speed int
+	speed   int
 	special int
 }
